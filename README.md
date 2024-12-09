@@ -22,3 +22,33 @@
       "password": "string"
   }
   ```
+- **Response**:
+  - `201 Created` on success.
+  - `400 Bad Request` if validation fails.
+
+#### `POST /user/auth`
+- **Description**: Authenticates a user and generates a JWT.
+- **Payload**:
+  ```json
+  {
+      "username": "string",
+      "password": "string"
+  }
+  ```
+- **Response**:
+  - `200 OK` with the JWT.
+  - `401 Unauthorized` if credentials are invalid.
+
+### Author Management
+#### `POST /authors`
+- **Description**: Adds a new author.
+- **Payload**:
+  ```json
+  {
+      "name": "string",
+      "bio": "string"
+  }
+  ```
+- **Response**:
+  - `201 Created` on success.
+  - `400 Bad Request` if validation fails.
