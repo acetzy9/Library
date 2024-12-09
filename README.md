@@ -52,3 +52,57 @@
 - **Response**:
   - `201 Created` on success.
   - `400 Bad Request` if validation fails.
+#### `GET /authors/get`
+- **Description**: Retrieves a list of all authors.
+- **Response**:
+  - `200 OK` with an array of authors.
+
+#### `PUT /authors/update/{id}`
+- **Description**: Updates details of a specific author.
+- **Payload**:
+  ```json
+  {
+      "name": "string",
+      "bio": "string"
+  }
+  ```
+- **Response**:
+  - `200 OK` on success.
+  - `404 Not Found` if the author ID does not exist.
+
+#### `DELETE /authors/delete/{id}`
+- **Description**: Deletes a specific author.
+- **Response**:
+  - `200 OK` on success.
+  - `404 Not Found` if the author ID does not exist.
+
+### Book Management
+#### `POST /books`
+- **Description**: Adds a new book.
+- **Payload**:
+  ```json
+  {
+      "title": "string",
+      "author_id": "integer",
+      "published_date": "string"
+  }
+  ```
+- **Response**:
+  - `201 Created` on success.
+  - `400 Bad Request` if validation fails.
+
+#### `GET /books/get`
+- **Description**: Retrieves a list of all books.
+- **Response**:
+  - `200 OK` with an array of books.
+
+#### `PUT /books/update/{id}`
+- **Description**: Updates details of a specific book.
+- **Payload**:
+  ```json
+  {
+      "title": "string",
+      "author_id": "integer",
+      "published_date": "string"
+  }
+  ```
