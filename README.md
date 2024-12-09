@@ -8,3 +8,17 @@
 - CRUD operations for authors and books.
 - Token-based authentication using JWT.
 - CORS support for cross-origin requests.
+
+
+## API Endpoints
+
+### User Management
+#### `POST /user/register`
+- **Description**: Registers a new user.
+- **Payload**: 
+  ```json
+  {
+      "username": "string",
+      "password": "string"
+  }
+  ```
