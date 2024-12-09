@@ -106,3 +106,43 @@
       "published_date": "string"
   }
   ```
+
+- **Response**:
+  - `200 OK` on success.
+  - `404 Not Found` if the book ID does not exist.
+
+#### `DELETE /books/delete/{id}`
+- **Description**: Deletes a specific book.
+- **Response**:
+  - `200 OK` on success.
+  - `404 Not Found` if the book ID does not exist.
+
+### Combined Data
+#### `GET /authors_books`
+- **Description**: Fetches data combining authors and their books.
+- **Response**:
+  - `200 OK` with combined data.
+
+## Technical Details
+- **Framework**: Slim PHP Framework
+- **Database**: MySQL (configured in `index.php`).
+- **Authentication**: JWT.
+
+## Setup
+1. Clone the repository.
+2. Install dependencies:
+   ```bash
+   composer install
+   ```
+3. Configure the database connection in `index.php`.
+4. Start the server:
+   ```bash
+   php -S localhost:8080 -t public
+   ```
+5. Access the API at `http://localhost:8080`.
+
+## Contributing
+Feel free to submit issues or create pull requests.
+
+## License
+This project is licensed under the MIT License.
